@@ -1491,35 +1491,45 @@ footer {
 }
 
 .footer-avatar-face {
-	position: absolute;
-	width: 100%;
-	height: 97%;
-	z-index: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 18px;
-	padding-left: 5px
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Change to space-between */
+    gap: 45px; /* Adjust the initial gap between the eyes */
+    padding-left: 60px; /* Adjust the padding between the face container and the left eye */
+    padding-right: 70px; /* Adjust the padding between the face container and the right eye */
 }
 
+
 .footer-avatar-eye {
-	width: 50px;
-	height: 50px;
-	background-color: #dfd2d2;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center
+    width: 30px; /* Adjust width to fit eye size */
+    height: 30px; /* Adjust height to fit eye size */
+    background-color: #dfd2d2; /* Lighter color for the eye background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensures pupil won't overflow */
 }
 
 .footer-pupil {
-	width: 20px;
-	height: 20px;
-	background-color: #000;
-	border-radius: 50%;
-	border: 5px solid #413333;
-	filter: blur(.6px)
+    width: 10px; /* Adjust width to fit pupil size */
+    height: 10px; /* Adjust height to fit pupil size */
+    background-color: #000; /* Black color for pupil */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the pupil */
+    z-index: 2;
+    transition: transform 0.1s ease; /* Add transition for smooth movement */
 }
+
+
 
 .footer-right-eye {
 	box-shadow: 15px 15px 5px rgba(0, 0, 0, .233) inset, 10px 10px 5px rgba(41, 33, 33, .644) inset;
@@ -1545,14 +1555,16 @@ footer {
 }
 
 .footer-bottom {
-	background-color: #0b0b0b;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 80px;
-	z-index: 3
+    background-color: #0b0b0b;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    z-index: 3;
+    margin-top: 150px; /* Add margin to move it down from the top */
 }
+
 
 .tonechange {
 	color: #000
